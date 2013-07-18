@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EDDC4DD17982D1600D1323D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDDC4DC17982D1600D1323D /* Foundation.framework */; };
+		4EDDC4E217982D1600D1323D /* Chronicle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4EDDC4E117982D1600D1323D /* Chronicle.h */; };
+		4EDDC4E417982D1600D1323D /* Chronicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDC4E317982D1600D1323D /* Chronicle.m */; };
+		4EDDC4EC17982D1600D1323D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDDC4EB17982D1600D1323D /* SenTestingKit.framework */; };
+		4EDDC4EE17982D1600D1323D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDDC4ED17982D1600D1323D /* UIKit.framework */; };
+		4EDDC4EF17982D1600D1323D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDDC4DC17982D1600D1323D /* Foundation.framework */; };
+		4EDDC4F217982D1600D1323D /* libChronicle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDDC4D917982D1600D1323D /* libChronicle.a */; };
+		4EDDC4F817982D1600D1323D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EDDC4F617982D1600D1323D /* InfoPlist.strings */; };
+		4EDDC4FB17982D1600D1323D /* ChronicleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDC4FA17982D1600D1323D /* ChronicleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EDDC4F017982D1600D1323D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EDDC4D117982D1500D1323D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EDDC4D817982D1500D1323D;
+			remoteInfo = Chronicle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4EDDC4D717982D1500D1323D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				4EDDC4E217982D1600D1323D /* Chronicle.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4EDDC4D917982D1600D1323D /* libChronicle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChronicle.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EDDC4DC17982D1600D1323D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4EDDC4E017982D1600D1323D /* Chronicle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chronicle-Prefix.pch"; sourceTree = "<group>"; };
+		4EDDC4E117982D1600D1323D /* Chronicle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chronicle.h; sourceTree = "<group>"; };
+		4EDDC4E317982D1600D1323D /* Chronicle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chronicle.m; sourceTree = "<group>"; };
+		4EDDC4EA17982D1600D1323D /* ChronicleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChronicleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EDDC4EB17982D1600D1323D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4EDDC4ED17982D1600D1323D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4EDDC4F517982D1600D1323D /* ChronicleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChronicleTests-Info.plist"; sourceTree = "<group>"; };
+		4EDDC4F717982D1600D1323D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4EDDC4F917982D1600D1323D /* ChronicleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChronicleTests.h; sourceTree = "<group>"; };
+		4EDDC4FA17982D1600D1323D /* ChronicleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChronicleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EDDC4D617982D1500D1323D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EDDC4DD17982D1600D1323D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EDDC4E617982D1600D1323D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EDDC4EC17982D1600D1323D /* SenTestingKit.framework in Frameworks */,
+				4EDDC4EE17982D1600D1323D /* UIKit.framework in Frameworks */,
+				4EDDC4EF17982D1600D1323D /* Foundation.framework in Frameworks */,
+				4EDDC4F217982D1600D1323D /* libChronicle.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EDDC4D017982D1500D1323D = {
+			isa = PBXGroup;
+			children = (
+				4EDDC4DE17982D1600D1323D /* Chronicle */,
+				4EDDC4F317982D1600D1323D /* ChronicleTests */,
+				4EDDC4DB17982D1600D1323D /* Frameworks */,
+				4EDDC4DA17982D1600D1323D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EDDC4DA17982D1600D1323D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EDDC4D917982D1600D1323D /* libChronicle.a */,
+				4EDDC4EA17982D1600D1323D /* ChronicleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EDDC4DB17982D1600D1323D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EDDC4DC17982D1600D1323D /* Foundation.framework */,
+				4EDDC4EB17982D1600D1323D /* SenTestingKit.framework */,
+				4EDDC4ED17982D1600D1323D /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EDDC4DE17982D1600D1323D /* Chronicle */ = {
+			isa = PBXGroup;
+			children = (
+				4EDDC4E117982D1600D1323D /* Chronicle.h */,
+				4EDDC4E317982D1600D1323D /* Chronicle.m */,
+				4EDDC4DF17982D1600D1323D /* Supporting Files */,
+			);
+			path = Chronicle;
+			sourceTree = "<group>";
+		};
+		4EDDC4DF17982D1600D1323D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EDDC4E017982D1600D1323D /* Chronicle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EDDC4F317982D1600D1323D /* ChronicleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EDDC4F917982D1600D1323D /* ChronicleTests.h */,
+				4EDDC4FA17982D1600D1323D /* ChronicleTests.m */,
+				4EDDC4F417982D1600D1323D /* Supporting Files */,
+			);
+			path = ChronicleTests;
+			sourceTree = "<group>";
+		};
+		4EDDC4F417982D1600D1323D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EDDC4F517982D1600D1323D /* ChronicleTests-Info.plist */,
+				4EDDC4F617982D1600D1323D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EDDC4D817982D1500D1323D /* Chronicle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDDC4FE17982D1600D1323D /* Build configuration list for PBXNativeTarget "Chronicle" */;
+			buildPhases = (
+				4EDDC4D517982D1500D1323D /* Sources */,
+				4EDDC4D617982D1500D1323D /* Frameworks */,
+				4EDDC4D717982D1500D1323D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chronicle;
+			productName = Chronicle;
+			productReference = 4EDDC4D917982D1600D1323D /* libChronicle.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4EDDC4E917982D1600D1323D /* ChronicleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDDC50117982D1600D1323D /* Build configuration list for PBXNativeTarget "ChronicleTests" */;
+			buildPhases = (
+				4EDDC4E517982D1600D1323D /* Sources */,
+				4EDDC4E617982D1600D1323D /* Frameworks */,
+				4EDDC4E717982D1600D1323D /* Resources */,
+				4EDDC4E817982D1600D1323D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EDDC4F117982D1600D1323D /* PBXTargetDependency */,
+			);
+			name = ChronicleTests;
+			productName = ChronicleTests;
+			productReference = 4EDDC4EA17982D1600D1323D /* ChronicleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EDDC4D117982D1500D1323D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Jeremy Tregunna";
+			};
+			buildConfigurationList = 4EDDC4D417982D1500D1323D /* Build configuration list for PBXProject "Chronicle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4EDDC4D017982D1500D1323D;
+			productRefGroup = 4EDDC4DA17982D1600D1323D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EDDC4D817982D1500D1323D /* Chronicle */,
+				4EDDC4E917982D1600D1323D /* ChronicleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EDDC4E717982D1600D1323D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EDDC4F817982D1600D1323D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EDDC4E817982D1600D1323D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EDDC4D517982D1500D1323D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EDDC4E417982D1600D1323D /* Chronicle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EDDC4E517982D1600D1323D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EDDC4FB17982D1600D1323D /* ChronicleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EDDC4F117982D1600D1323D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EDDC4D817982D1500D1323D /* Chronicle */;
+			targetProxy = 4EDDC4F017982D1600D1323D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4EDDC4F617982D1600D1323D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EDDC4F717982D1600D1323D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4EDDC4FC17982D1600D1323D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4EDDC4FD17982D1600D1323D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EDDC4FF17982D1600D1323D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Chronicle.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chronicle/Chronicle-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4EDDC50017982D1600D1323D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Chronicle.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chronicle/Chronicle-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4EDDC50217982D1600D1323D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chronicle/Chronicle-Prefix.pch";
+				INFOPLIST_FILE = "ChronicleTests/ChronicleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4EDDC50317982D1600D1323D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chronicle/Chronicle-Prefix.pch";
+				INFOPLIST_FILE = "ChronicleTests/ChronicleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EDDC4D417982D1500D1323D /* Build configuration list for PBXProject "Chronicle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EDDC4FC17982D1600D1323D /* Debug */,
+				4EDDC4FD17982D1600D1323D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDDC4FE17982D1600D1323D /* Build configuration list for PBXNativeTarget "Chronicle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EDDC4FF17982D1600D1323D /* Debug */,
+				4EDDC50017982D1600D1323D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4EDDC50117982D1600D1323D /* Build configuration list for PBXNativeTarget "ChronicleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EDDC50217982D1600D1323D /* Debug */,
+				4EDDC50317982D1600D1323D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EDDC4D117982D1500D1323D /* Project object */;
+}
