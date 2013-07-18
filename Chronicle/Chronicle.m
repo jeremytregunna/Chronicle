@@ -88,7 +88,7 @@ static NSString* const ChronicleDefaultLogger = @"__ChronicleDefaultLogger";
         if(_files[path] != nil)
             return;
 
-        NSError* error;
+        NSError* error = nil;
         NSFileHandle* handle = [NSFileHandle fileHandleForWritingToURL:url error:&error];
         if(error != nil)
         {
@@ -97,7 +97,7 @@ static NSString* const ChronicleDefaultLogger = @"__ChronicleDefaultLogger";
         }
 
         _files[path] = handle;
-        [self _sendAddFileTaskWithFileHandle:handle failureBlock:failureBlock];
+        [self _sendAddFileTaskWithFileHandle:handle queue:dispatch_get_main_queue() failureBlock:failureBlock];
     }
 }
 
@@ -122,7 +122,7 @@ static NSString* const ChronicleDefaultLogger = @"__ChronicleDefaultLogger";
             @throw [NSException exceptionWithName:ChronicleInternalInconsistencyException reason:@"A corresponding file handle was not found in our dictionary of file handles" userInfo:@{ ChronicleFileURL: url }];
         }
 
-        [self _sendRemoveFileTaskWithURL:url fileHandle:handle failureBlock:failureBlock];
+        [self _sendRemoveFileTaskWithURL:url fileHandle:handle queue:dispatch_get_main_queue() failureBlock:failureBlock];
     }
 }
 
@@ -142,33 +142,35 @@ static NSString* const ChronicleDefaultLogger = @"__ChronicleDefaultLogger";
 - (void)_sendLogTaskWithMessage:(NSString*)formattedMessage level:(int)level
 {
     __weak typeof(self) weakSelf = self;
-    dispatch_async(_sourceQueue, ^{
+    dispatch_sync(_sourceQueue, ^{
         typeof(weakSelf) strongSelf = weakSelf;
         asl_log(strongSelf.client, NULL, level, [formattedMessage UTF8String], NULL);
     });
 }
 
-- (void)_sendAddFileTaskWithFileHandle:(NSFileHandle*)handle failureBlock:(void (^)(NSError*))failureBlock
+- (void)_sendAddFileTaskWithFileHandle:(NSFileHandle*)handle queue:(dispatch_queue_t)queue failureBlock:(void (^)(NSError*))failureBlock
 {
     __weak typeof(self) weakSelf = self;
-    dispatch_async(_sourceQueue, ^{
+    dispatch_sync(_sourceQueue, ^{
         typeof(weakSelf) strongSelf = weakSelf;
 
         if(asl_add_log_file(strongSelf.client, handle.fileDescriptor) != 0)
         {
             if(failureBlock)
             {
-                NSError* error = [NSError errorWithDomain:ChronicleErrorDomain code:ChronicleInvalidFileHandle userInfo:nil];
-                failureBlock(error);
+                dispatch_async(queue, ^{
+                    NSError* error = [NSError errorWithDomain:ChronicleErrorDomain code:ChronicleInvalidFileHandle userInfo:nil];
+                    failureBlock(error);
+                });
             }
         }
     });
 }
 
-- (void)_sendRemoveFileTaskWithURL:(NSURL*)url fileHandle:(NSFileHandle*)handle failureBlock:(void (^)(NSError*))failureBlock
+- (void)_sendRemoveFileTaskWithURL:(NSURL*)url fileHandle:(NSFileHandle*)handle queue:(dispatch_queue_t)queue failureBlock:(void (^)(NSError*))failureBlock
 {
     __weak typeof(self) weakSelf = self;
-    dispatch_async(_sourceQueue, ^{
+    dispatch_sync(_sourceQueue, ^{
         typeof(weakSelf) strongSelf = weakSelf;
 
         [strongSelf.files removeObjectForKey:url.path];
@@ -176,8 +178,10 @@ static NSString* const ChronicleDefaultLogger = @"__ChronicleDefaultLogger";
         {
             if(failureBlock)
             {
-                NSError* error = [NSError errorWithDomain:ChronicleErrorDomain code:ChronicleInvalidFileHandle userInfo:nil];
-                failureBlock(error);
+                dispatch_async(queue, ^{
+                    NSError* error = [NSError errorWithDomain:ChronicleErrorDomain code:ChronicleInvalidFileHandle userInfo:nil];
+                    failureBlock(error);
+                });
             }
         }
     });
