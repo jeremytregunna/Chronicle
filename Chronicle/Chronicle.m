@@ -35,7 +35,10 @@ static NSString* const ChronicleDefaultLogger = @"__ChronicleDefaultLogger";
     else
     {
         Chronicle* logger = [[self alloc] initWithName:ChronicleDefaultLogger facility:nil options:0];
-        threadDictionary[ChronicleDefaultLogger] = logger;
+        @synchronized(threadDictionary)
+        {
+            threadDictionary[ChronicleDefaultLogger] = logger;
+        }
         return logger;
     }
 }
